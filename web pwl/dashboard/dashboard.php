@@ -7,12 +7,19 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
+
 // Panggil koneksi
 include_once('../koneksi/koneksi.php');
 
 // Simpan nama user dari session
 $user_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Pengguna';
+
+switch ($page) {
+   
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,7 +33,7 @@ $user_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Pengguna'
   <h3>PT. BERKAH MULYA <br> ABADI WONOSOBO</h3>
   <nav>
     <a href="#" class="active">Dashboard</a>
-    <a href="#">Data Pegawai</a>
+    <a href="../data pegawai/data_pegawai.php">Data Pegawai</a>
     <a href="#">Masa Kerja</a>
     <a href="#">Masa Tenggang Kerja</a>
     <a href="#">Penempatan Kerja</a>
@@ -123,3 +130,4 @@ function toggleSidebar() {
 
 </body>
 </html>
+
