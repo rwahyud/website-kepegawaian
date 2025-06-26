@@ -96,7 +96,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <button type="submit">Simpan</button>
   </form>
 
-  <a href="../index.php?page=pegawai">← Kembali ke Data Pegawai</a>
+  <a href="../data_pegawai.php?page=pegawai">← Kembali ke Data Pegawai</a>
+<?php
+session_start();
+
+// Cek apakah user sudah login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login/login.php");
+    exit;
+}
+
+include_once "koneksi/koneksi.php";
+
+$page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
+
+switch ($page) {
+    case 'dashboard':
+        include "dashboard/dashboard.php";
+        break;
+    case 'pegawai':
+        include "data pegawai/data_pegawai.php";
+        break;
+    case 'tambah_pegawai':
+        include "data pegawai/tambah_pegawai.php";
+        break;
+    // Tambah case lain sesuai kebutuhan
+    default:
+        echo "<h2>Halaman tidak ditemukan!</h2>";
+}
+?>
+
+
+
+
 
 </body>
 </html>
