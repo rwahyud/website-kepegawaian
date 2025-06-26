@@ -1,146 +1,171 @@
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f1f1f1;
-    }
-    .sidebar {
-      position: fixed;
-      width: 180px;
-      height: 100vh;
-      background: #142850;
-      color: #fff;
-      padding-top: 20px;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
- .sidebar h3 {
-      text-align: center;
-      font-size: 14px;
-      margin-bottom: 30px;
-      padding: 0 10px;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f1f1;
+}
 
+.sidebar {
+  position: fixed;
+  width: 220px;
+  height: 100vh;
+  background: #0b224c;
+  color: #fff;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h3 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  font-weight: bold;
+}
 
 .sidebar nav a {
   display: block;
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 12px 20px;
+  margin: 8px 15px;
   color: white;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 30px;
+  transition: background 0.3s;
 }
 
 .sidebar nav a.active,
 .sidebar nav a:hover {
-  background-color: #007bff;
+  background-color: #0d84ff;
+  color: white;
 }
 
-.sidebar.collapsed h3,
-.sidebar.collapsed nav a {
-  display: none;
+.bottom-menu {
   padding: 10px;
+  text-align: center;
 }
 
-.sidebar.collapsed .bottom-menu {
+.bottom-menu .minimize-btn {
+  background-color: #0d84ff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.bottom-menu a {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.header {
+  background: #2e3e5c;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-    .topbar {
-      background-color: #0a2a51;
-      color: white;
-      padding: 15px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .content {
-      margin-left: 180px;
-      padding: 20px;
-    }
-    .header {
-      background: #2e3e5c;
-      color: white;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header .profile {
-      display: flex;
-      align-items: center;
-    }
-    .header .profile img {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-    .main-content {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .main-content h2 {
-      margin-bottom: 10px;
-    }
-    .btn {
-      background: #0a2e63;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .table-container {
-      margin-top: 20px;
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-      text-align: left;
-      font-size: 14px;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    .actions button {
-      margin-right: 5px;
-      padding: 5px 10px;
-      border: none;
-      border-radius: 4px;
-      color: white;
-      cursor: pointer;
-    }
-    .actions .edit {
-      background-color: #0a2e63;
-    }
-    .actions .hapus {
-      background-color: #b23b3b;
-    }
-    .search-bar {
-      float: right;
-      margin-top: -35px;
-    }
-    .search-bar input[type="text"] {
-      padding: 6px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      width: 200px;
-    }
-    .footer {
-      background: #142850;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      left: 180px;
-      width: calc(100% - 180px);
-    }
+
+.header .profile {
+  display: flex;
+  align-items: center;
+}
+
+.header .profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.main-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.main-content h2 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background: #0a2e63;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.actions .edit {
+  background-color: #0a2e63;
+}
+
+.actions .hapus {
+  background-color: #b23b3b;
+}
+
+.search-bar {
+  float: right;
+  margin-top: -35px;
+}
+
+.search-bar input[type="text"] {
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.footer {
+  background: #0b224c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  width: calc(100% - 220px);
+}
