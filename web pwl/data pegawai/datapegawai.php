@@ -15,12 +15,12 @@
   <div class="sidebar" id="sidebar">
   <h3>PT. BERKAH MULYA <br> ABADI WONOSOBO</h3>
   <nav>
-    <a href="#" class="active">Dashboard</a>
-    <a href="../data pegawai/data_pegawai.php">Data Pegawai</a>
-    <a href="#">Masa Kerja</a>
-    <a href="#">Masa Tenggang Kerja</a>
-    <a href="#">Penempatan Kerja</a>
-    <a href="#">Absensi</a>
+    <a href="../dashboard/dashboard.php">Dashboard</a>
+    <a href="#" class="active">Datapegawai</a>
+    <a href="../masa kerja/masakerja.php">Masa Kerja</a>
+    <a href="../masa tenggang/masa_tenggang.php">Masa Tenggang Kerja</a>
+    <a href="../penempatan kerja/penempatan_kerja.php">Penempatan Kerja</a>
+    <a href="../absensi/absensi.php">Absensi</a>
   </nav>
   <div class="bottom-menu">
     <button class="minimize-btn" onclick="toggleSidebar()">≡</button>
@@ -91,7 +91,6 @@
   </div>
 </body>
 </html>
-
 
 
 
