@@ -34,10 +34,10 @@ switch ($page) {
   <nav>
     <a href="#" class="active">Dashboard</a>
     <a href="../data pegawai/data_pegawai.php">Data Pegawai</a>
-    <a href="#">Masa Kerja</a>
-    <a href="#">Masa Tenggang Kerja</a>
-    <a href="#">Penempatan Kerja</a>
-    <a href="#">Absensi</a>
+    <a href="../masa kerja/masakerja.php">Masa Kerja</a>
+    <a href="../masa tenggang/masa_tenggang.php">Masa Tenggang Kerja</a>
+    <a href="../penempatan kerja/penempatan_kerja.php">Penempatan Kerja</a>
+    <a href="../absensi/absensi.php">Absensi</a>
   </nav>
   <div class="bottom-menu">
     <button class="minimize-btn" onclick="toggleSidebar()">≡</button>
@@ -130,4 +130,3 @@ function toggleSidebar() {
 
 </body>
 </html>
-
